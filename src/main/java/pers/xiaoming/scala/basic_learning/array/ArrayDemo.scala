@@ -9,5 +9,11 @@ object ArrayDemo {
 
     val arrayAny = Array("leo", 0, 2.0)
     arrayAny.foreach(println)
+
+    println
+
+    println(arrayAny.mkString)
+    println(arrayAny.mkString(","))
+    println(arrayAny.mkString("<", ">,<", ">"))
   }
 }

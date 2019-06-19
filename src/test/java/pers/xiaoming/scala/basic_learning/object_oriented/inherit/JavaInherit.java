@@ -13,5 +13,13 @@ public class JavaInherit {
         JavaChild child = new JavaChild("name", 2);
         child.getAddress();
         child.getId();
+
+        System.out.println();
+
+        System.out.println(child.getId());
+        System.out.println(child.getIdChild());
+        child.id = 10;
+        System.out.println(child.getId());
+        System.out.println(child.getIdChild());
     }
 }

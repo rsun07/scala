@@ -3,6 +3,10 @@ package pers.xiaoming.scala.basic_learning.object_oriented.inherit;
 public class JavaChild extends JavaParent {
     private final static String CLASS_ID = "JAVA_Child";
 
+    // Override parent param
+    private String name;
+    int id;
+
     private String type;
 
     public JavaChild(String name, int id) {
@@ -30,9 +34,8 @@ public class JavaChild extends JavaParent {
         return super.getAddress();
     }
 
-    public int getId() {
+    public int getIdChild() {
         System.out.println(CLASS_ID + " Get id ");
-        // non private field accessible
         return this.id;
     }
 }

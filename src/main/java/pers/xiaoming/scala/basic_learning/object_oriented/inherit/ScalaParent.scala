@@ -1,11 +1,17 @@
 package pers.xiaoming.scala.basic_learning.object_oriented.inherit
 
-class ScalaParent(private val name:String, var id:Int = 0, private[this] var address:String) {
+class ScalaParent {
   private final val CLASS_ID = "SCALA_PARENT"
 
   println(CLASS_ID + " Constructor")
 
-  private def getId = {
+  private var name = ""
+  val id = 0
+  private[this] var address = ""
+
+  private def getId = id
+
+  def getIdParent = {
     println(CLASS_ID + " Get Id")
     id
   }

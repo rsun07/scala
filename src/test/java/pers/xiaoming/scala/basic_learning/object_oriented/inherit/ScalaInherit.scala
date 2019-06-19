@@ -6,10 +6,10 @@ class ScalaInherit {
 
   @Test
   def test {
-    val parent = new ScalaParent("Mike", 2, "")
+    val parent = new ScalaParent
 
     println
-    val child = new ScalaChild("Mike", 2, "")
+    val child = new ScalaChild("Name")
 
     println
 
@@ -22,5 +22,15 @@ class ScalaInherit {
 
     println(child.getAddress)
     println
+
+
+    println(child.id)
+    println(child.getIdChild)
+    println(child.getIdParent)
+    println
+
+    println(child.id)
+    println(child.getIdChild)
+    println(child.getIdParent)
   }
 }

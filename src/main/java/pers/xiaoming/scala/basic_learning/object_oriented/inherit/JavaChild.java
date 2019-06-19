@@ -36,6 +36,7 @@ public class JavaChild extends JavaParent {
 
     public int getIdChild() {
         System.out.println(CLASS_ID + " Get id ");
+        System.out.println(String.format("This id = %d, Super id = %d", this.id, super.id));
         return this.id;
     }
 }

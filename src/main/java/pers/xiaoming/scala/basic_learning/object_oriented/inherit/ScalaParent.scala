@@ -5,7 +5,7 @@ class ScalaParent(private val name:String, var id:Int = 0, private[this] var add
 
   println(CLASS_ID + " Constructor")
 
-  def getId = {
+  private def getId = {
     println(CLASS_ID + " Get Id")
     id
   }

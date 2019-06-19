@@ -16,8 +16,9 @@ class ScalaInherit {
     println(child.getName)
     println
 
-    println(child.getId)
-    println
+    // Cannot access parent private method
+//    println(child.getId)
+//    println
 
     println(child.getAddress)
     println

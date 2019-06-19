@@ -18,9 +18,14 @@ public class JavaParent {
         this.address = address;
     }
 
-    public int getId() {
+    private int getId() {
         System.out.println(CLASS_ID + " Get id ");
         // non private field accessible
+        return this.id;
+    }
+
+    public int getIdParent() {
+        System.out.println(CLASS_ID + " Get id Parent");
         return this.id;
     }
 

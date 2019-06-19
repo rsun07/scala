@@ -4,7 +4,7 @@ import org.junit.Test
 
 class Demo {
   @Test
-  def test {
+  def testConstructor {
     val person = new Person
 
     println
@@ -14,5 +14,19 @@ class Demo {
     println
 
     val person3 = new Person("Mike", 18)
+  }
+
+  @Test
+  def testCompanionObject {
+    val person = new Person2("Jane")
+
+    println
+
+    val person2 = Person2.apply("Jane")
+
+    println
+
+
+    val person3 = Person2.apply("Mike", 18)
   }
 }

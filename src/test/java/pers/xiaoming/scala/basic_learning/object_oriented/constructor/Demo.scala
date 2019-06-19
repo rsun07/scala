@@ -29,4 +29,11 @@ class Demo {
 
     val person3 = Person2.apply("Mike", 18)
   }
+
+  @Test
+  def testEnum {
+    println(TrafficLight.GREEN)
+    println(TrafficLight(1))
+    println(TrafficLight.withName("Yellow"))
+  }
 }

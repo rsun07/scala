@@ -18,7 +18,7 @@ object BasicForLoop {
     for(c <- "Hello World") print(c + " ")
 
     println("\n\nEven number using if:")
-    for(i <- 1 to 10 if i % 2== 0) print(i + " ")
+    for(i <- 1 to 10 if i % 2 == 0) print(i + " ")
 
     println("\n\nOdd number using by 2:")
     for(i <- 1 to 10 by 2) print(i + " ")

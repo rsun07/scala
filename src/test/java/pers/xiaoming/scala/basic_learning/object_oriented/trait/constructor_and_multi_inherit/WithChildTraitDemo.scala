@@ -1,17 +1,19 @@
-package pers.xiaoming.scala.basic_learning.object_oriented.`trait`.with_trait_and_chain
+package pers.xiaoming.scala.basic_learning.object_oriented.`trait`.constructor_and_multi_inherit
 
 import org.junit.Test
 
-class Demo {
+class WithChildTraitDemo {
   @Test
-  def withDemo: Unit ={
+  def demo: Unit ={
     val requestHandler = new RequestHandler("Request")
+    println
     requestHandler.filterRequest
     println(requestHandler.getClass)
 
     println
 
     val requestHandler2 = new RequestHandler("Request2") with HttpHeaderFilter
+    println
     requestHandler2.filterRequest
     // anonymous class
     println(requestHandler2.getClass)
@@ -19,15 +21,9 @@ class Demo {
     println
 
     val requestHandler3 = new RequestHandler("Request3") with HttpContextFilter
+    println
     requestHandler3.filterRequest
     // anonymous class
     println(requestHandler3.getClass)
   }
-
-  @Test
-  def chainDemo: Unit = {
-    val httpRequestHandler = new HttpRequestHandler("Request")
-    httpRequestHandler.filterRequest
-  }
-
 }

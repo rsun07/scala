@@ -24,4 +24,10 @@ class Demo {
     println(requestHandler3.getClass)
   }
 
+  @Test
+  def chainDemo: Unit = {
+    val httpRequestHandler = new HttpRequestHandler("Request")
+    httpRequestHandler.filterRequest
+  }
+
 }

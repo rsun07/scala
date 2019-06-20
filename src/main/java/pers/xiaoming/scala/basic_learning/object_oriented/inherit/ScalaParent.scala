@@ -17,7 +17,7 @@ class ScalaParent {
   }
 
   def getName = {
-    println(CLASS_ID + " Get Name")
+    println(CLASS_ID + " Get Name:" + name)
     this.name
   }
 

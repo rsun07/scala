@@ -20,7 +20,7 @@ class ScalaChild extends ScalaParent  {
   }
 
   override def getName: String = {
-    println(CLASS_ID + " Get Name")
+    println(CLASS_ID + " Get Name: " + super.getName)
     // inaccessible
     // super.name
 

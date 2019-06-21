@@ -5,7 +5,7 @@ object MyRouter {
     urls match {
       case Array("health") => "/my/health"
       case Array("name") => "/my/name/{name}"
-      case Array("name", "class") => "/my/class/{class}/name/{name}"
+      case Array("class", "name") => "/my/class/{class}/name/{name}"
       case Array("class", _subpath) => "/my/class/{class}/" + _subpath
       case Array("class", _*) => "/my/class/{class}/help"
       case _ => "/404"

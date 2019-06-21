@@ -16,9 +16,9 @@ object MyRouter {
     urls match {
       case "health"::Nil => "/my/health"
       case "name"::Nil => "/my/name/{name}"
-      case "name"::"class"::Nil => "/my/class/{class}/name/{name}"
+      case "class"::"name"::Nil => "/my/class/{class}/name/{name}"
       case "class"::_subpath::Nil => "/my/class/{class}/" + _subpath
-      case "class"::tail => "/my/class/{class}" + tail.toString()
+      case "class"::tail => "/my/class/{class}/help"
       case _ => "/404"
     }
   }

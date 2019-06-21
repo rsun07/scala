@@ -1,4 +1,4 @@
-package pers.xiaoming.scala.basic_learning.collection.list
+package pers.xiaoming.scala.basic_learning.collection
 
 import org.junit.Test
 

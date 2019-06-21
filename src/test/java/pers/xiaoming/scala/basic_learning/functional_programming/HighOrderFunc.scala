@@ -1,4 +1,4 @@
-package pers.xiaoming.scala.basic_learning.functional_programming.basic
+package pers.xiaoming.scala.basic_learning.functional_programming
 
 import org.junit.Test
 

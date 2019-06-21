@@ -18,7 +18,7 @@ object MyRouter {
       case "name"::Nil => "/my/name/{name}"
       case "class"::"name"::Nil => "/my/class/{class}/name/{name}"
       case "class"::_subpath::Nil => "/my/class/{class}/" + _subpath
-      case "class"::tail => "/my/class/{class}/help"
+      case "class"::_ => "/my/class/{class}/help"
       case _ => "/404"
     }
   }

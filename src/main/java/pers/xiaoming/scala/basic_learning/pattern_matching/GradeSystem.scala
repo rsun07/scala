@@ -1,6 +1,6 @@
 package pers.xiaoming.scala.basic_learning.pattern_matching
 
-class GradeSystem {
+object GradeSystem {
   def scoreToGrade(name:String, score:Int): String = {
     score match {
       case 0 => println(name + " was sick"); "SKIP"

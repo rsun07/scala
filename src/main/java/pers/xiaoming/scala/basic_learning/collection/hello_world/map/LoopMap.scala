@@ -1,4 +1,4 @@
-package pers.xiaoming.scala.basic_learning.map
+package pers.xiaoming.scala.basic_learning.collection.hello_world.map
 
 object LoopMap {
   def main(args: Array[String]): Unit = {

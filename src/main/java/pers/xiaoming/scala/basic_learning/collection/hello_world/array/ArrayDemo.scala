@@ -1,4 +1,4 @@
-package pers.xiaoming.scala.basic_learning.array
+package pers.xiaoming.scala.basic_learning.collection.hello_world.array
 
 object ArrayDemo {
   def main(args: Array[String]): Unit = {

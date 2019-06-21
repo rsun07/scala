@@ -1,4 +1,4 @@
-package pers.xiaoming.scala.basic_learning.array
+package pers.xiaoming.scala.basic_learning.collection.hello_world.array
 
 // Works for both Array and ArrayBuffer
 object LoopArray {

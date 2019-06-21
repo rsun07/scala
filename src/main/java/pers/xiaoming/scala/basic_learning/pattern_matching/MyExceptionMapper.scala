@@ -7,7 +7,7 @@ object MyExceptionMapper {
     e match {
       case e:RuntimeException => println("Runtime Exception" + e.getMessage)
       case e:IOException => println("IOException" + e.getMessage)
-      case _e:Throwable => println("Other unknown exception" + _e.getMessage)
+      case _e:Throwable => println("Unknown Exception" + _e.getMessage)
     }
   }
 }

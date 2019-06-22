@@ -28,11 +28,36 @@ class GenericTypeDemo {
   }
 
 
-  //Scala的协变covariant(+)，逆变contravariant(-)
+  //Scala covariant(+), contravariant(-)
   @Test
   def covariantDemo {
-    // compiler error
-    // Competition.F1CarRace(ferrariF1Car1, moto)
+    val carLicense = new License[Car]
+    val f1CarLicense = new License[F1Car]
+    val jeepLicense = new License[Jeep]
 
+    LicenseChecker.checkLicense(carLicense)
+    LicenseChecker.checkLicense(f1CarLicense)
+    LicenseChecker.checkLicense(jeepLicense)
+
+    val carCovariantLicense = new CovariantLicense[Car]
+    val JeepCovariantLicense = new CovariantLicense[Jeep]
+    val F1CarCovariantLicense = new CovariantLicense[F1Car]
+    val FerrariCovariantLicense = new CovariantLicense[FerrariF1]
+
+    // error
+    // LicenseChecker.covariantLicense(carCovariantLicense)
+    // LicenseChecker.covariantLicense(JeepCovariantLicense)
+    LicenseChecker.covariantLicense(F1CarCovariantLicense)
+    LicenseChecker.covariantLicense(FerrariCovariantLicense)
+
+    val carContravariantLicense = new ContravariantLicense[Car]
+    val jeepContravariantLicense = new ContravariantLicense[Jeep]
+    val F1CarContravariantLicense = new ContravariantLicense[F1Car]
+    val ferrariContravariantLicense = new ContravariantLicense[FerrariF1]
+
+    LicenseChecker.contravariantLicense(carContravariantLicense)
+    // LicenseChecker.contravariantLicense(jeepContravariantLicense)
+    LicenseChecker.contravariantLicense(F1CarContravariantLicense)
+    // LicenseChecker.contravariantLicense(ferrariContravariantLicense)
   }
 }

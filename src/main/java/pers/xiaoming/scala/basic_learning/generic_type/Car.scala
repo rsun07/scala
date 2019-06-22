@@ -1,18 +1,10 @@
 package pers.xiaoming.scala.basic_learning.generic_type
 
-class Car {
-  var name:String = _
-  var velocity:Int = _
-  def this(n:String, v:Int) {
-    this()
-    name = n
-    velocity = v
-  }
-}
+class Car(val name:String, val velocity:Int)
 
-class F1Car extends Car
-class FerrariF1 extends F1Car
-class RedBullF1 extends F1Car
+class F1Car(name:String, velocity:Int) extends Car(name:String, velocity:Int)
+class FerrariF1(name:String, velocity:Int) extends F1Car(name:String, velocity:Int)
+class RedBullF1(name:String, velocity:Int) extends F1Car(name:String, velocity:Int)
 
-class Jeep extends Car
+class Jeep(name:String, velocity:Int) extends Car(name:String, velocity:Int)
 

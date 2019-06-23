@@ -1,6 +1,6 @@
 package pers.xiaoming.scala.basic_learning.akka
 
-import akka.actor.{Actor, ActorSystem, Props}
+import akka.actor.{Actor, ActorKilledException, ActorSystem, Kill, Props}
 
 class HelloActor extends Actor {
   override def preStart(): Unit = println("\nHello Actor pre start\n")
@@ -23,5 +23,16 @@ object HelloActor extends App {
   helloActor ! 0
   helloActor ! Array(0)
 
+  try {
+    helloActor ! Kill
+  } catch {
+    case e:ActorKilledException => println("Exception catch"); println(e.message)
+    case _ => println("Unknown Exception catch")
+  }
+
+  println("hello actor killed")
+  Thread.sleep(2000)
+
   actorSystem.terminate()
+  println("actor system terminated")
 }

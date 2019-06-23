@@ -3,6 +3,10 @@ package pers.xiaoming.scala.basic_learning.akka
 import akka.actor.{Actor, ActorSystem, Props}
 
 class HelloActor extends Actor {
+  override def preStart(): Unit = println("\nHello Actor pre start\n")
+
+  override def postStop(): Unit = println("\nHello Actor post stop\n")
+
   override def receive: Receive = {
     case "Hello" => println("Hello Actor")
     case "World" => println("Hello World")
@@ -18,4 +22,6 @@ object HelloActor extends App {
   helloActor ! "World"
   helloActor ! 0
   helloActor ! Array(0)
+
+  actorSystem.terminate()
 }

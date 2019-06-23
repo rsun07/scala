@@ -10,8 +10,8 @@ class SetDemo {
     val set = Set(1, 2, 3)
     printSet(set)
 
-    val set2 = set.concat("A")
-    printSet(set2)
+    //val set2 = set.concat("A")
+    //printSet(set2)
 
     val set3 = mutable.HashSet(1, 2, 3, 5, "A", "D")
     set3.add("S")

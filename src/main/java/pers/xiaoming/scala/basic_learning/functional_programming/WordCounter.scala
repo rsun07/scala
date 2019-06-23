@@ -29,7 +29,7 @@ class WordCounter {
     val wordToAppearanceArray:Map[String, Array[String]] = wordList.groupBy((word:String) => word)
 
     // Multiple ways to convert the map into a new map
-    wordToAppearanceArray.view.mapValues(_.length).toMap
+    wordToAppearanceArray.mapValues(_.length)
   }
 
   def allDistinctWordsList: Array[String] = {
